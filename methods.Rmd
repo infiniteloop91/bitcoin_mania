@@ -5,6 +5,17 @@ date: "12/12/2018"
 output: html_document
 ---
 
+```{r load data, include = FALSE}
+library(ggplot2)
+library(plotly)
+google_data <- read.csv("/Users/ERIC/Desktop/BDS_522/BDS_WEBSITE/bitcoin_mania/Stock_Search_data.csv", sep = ',')
+stock_data <- read.csv("/Users/ERIC/Desktop/BDS_522/BDS_WEBSITE/bitcoin_mania/TRADING_VOLUME.csv", header = TRUE, sep = ',')
+bitcoin_data <- read.csv("/Users/ERIC/Desktop/BDS_522/BDS_WEBSITE/bitcoin_mania/bitcoin_multiTimeline.csv", header = TRUE, sep = ',')
+bitcoin_price <- read.csv("/Users/ERIC/Desktop/BDS_522/BDS_WEBSITE/bitcoin_mania/coindesk-bpi-USD-close_data-2010-07-17_2018-10-09.csv", header = TRUE, sep = ',')
+bitcoin_trades <- read.csv("/Users/ERIC/Desktop/BDS_522/BDS_WEBSITE/bitcoin_mania/bitcoinity_data.csv", header = TRUE, sep = ',')
+gdp_data <- read.csv("/Users/ERIC/Desktop/BDS_522/BDS_WEBSITE/bitcoin_mania/GDP_DATA.csv", header = TRUE, sep = ',')
+```
+
 
 ```{r pressure, echo=FALSE, include=FALSE}
 head(google_data)
