@@ -13,3 +13,4 @@ RnwWeave: Sweave
 LaTeX: pdfLaTeX
 
 BuildType: Website
+WebsitePath: ~/Desktop/BDS_522/BDS_WEBSITE/bitcoin_mania

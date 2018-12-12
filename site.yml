@@ -7,3 +7,7 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Data"
+      href: data.html
+    - text: "Results"
+      href: results.html
