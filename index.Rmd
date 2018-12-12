@@ -2,12 +2,9 @@
 title: "Introduction"
 author: "By Eric Lyons"
 date: "12/12/2018"
+class: "BDS 522"
 output: html_document
 ---
-
-<img src="https://github.com/infiniteloop91/bitcoin_mania/blob/master/flowers.jpg?raw=true"
-     alt="Flowers"
-     style="float: left; margin-right: 10px;" />
 
   Each year, seven million tulips bloom in Keukhenf, a public garden located in Southern Holland. Beside windmills, bicycles and chocolate, the small flower is one of the most iconic symbols associated with the Netherlands. While the flower is known for its colorful petals and delicate structure, it decimated the nation’s economy at the beginning of the 17th century.
 
