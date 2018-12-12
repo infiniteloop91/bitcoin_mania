@@ -1,0 +1,14 @@
+name: "erics-website"
+output_dir: "."
+navbar:
+  title: "BDS 522 Project"
+  left:
+    - text: "Home"
+      href: introduction.html
+    - text: "Data"
+      href: data.html
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
+    
