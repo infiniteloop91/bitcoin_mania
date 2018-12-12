@@ -9,16 +9,105 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+```{r pressure, echo=FALSE, include=FALSE}
+head(google_data)
+stock_data = stock_data[-1,]
+attach(google_data)
+attach(stock_data)
+head(stock_data)
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+#fix number
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+gdp_data$GDP <- as.numeric(gdp_data$GDP)
 
-```{r cars}
-summary(cars)
+gdp_data$DATE <- as.character(gdp_data$DATE)
+gdp_data$DATE <- as.Date(gdp_data$DATE, format = "%m/%d/%y")
+
+stock_data$Shares.Traded <- gsub(',', '',stock_data$Shares.Traded)
+stock_data$Shares.Traded <- as.numeric(stock_data$Shares.Traded)
+
+bitcoin_trades$TOTAL <- gsub(',', '', bitcoin_trades$TOTAL)
+bitcoin_trades$TOTAL <- as.numeric(bitcoin_trades$TOTAL)
+bitcoin_trades$Time <- as.character(bitcoin_trades$Time)
+bitcoin_trades$Time <- as.Date(bitcoin_trades$Time, format = "%Y-%m-%d")
+
+#fix the dates It is the worst part. 
+stock_data$X <- gsub('/', '-',stock_data$X)
+stock_data$X <- paste0(stock_data$X, "-01")
+stock_data$X <- as.character(stock_data$X)
+stock_data$X <- as.Date(stock_data$X, format = "%Y-%m-%d")
+
+#fix the dates It is the worst part.
+#talk about tuplip mania
+#are stocks more subject to media coverage or a craze nature.
+
+class(google_data$DATE)
+google_data$DATE <- as.character(google_data$DATE)
+google_data$DATE <- as.Date(google_data$DATE, format = "%m/%d/%y")
+google_data$SEARCHES <- as.numeric(google_data$SEARCHES)
+length(google_data$SEARCHES)
+
+#fix dates again
+bitcoin_data$Month <- paste0(bitcoin_data$Month, "-01")
+bitcoin_data$Month <- as.character(bitcoin_data$Month)
+bitcoin_data$Month <- as.Date(bitcoin_data$Month, format = "%Y-%m-%d")
+bitcoin_data$bitcoin <- as.numeric(bitcoin_data$bitcoin)
+
+bitcoin_price$Date <- as.character(bitcoin_price$Date)
+bitcoin_price$Date <- as.Date(bitcoin_price$Date, format = "%m/%d/%y")
+bitcoin_price$Close_Price <- as.numeric(bitcoin_price$Close_Price)
+
+mo <- strftime(bitcoin_price$Date, "%m")
+yr <- strftime(bitcoin_price$Date, "%Y")
+amt <- runif(3)
+dd <- data.frame(mo, yr, amt)
+
 ```
 
+```{r graph one, echo = TRUE}
+ggplot(data=bitcoin_trades, aes(x=bitcoin_trades$Time, y=bitcoin_trades$TOTAL)) +
+  geom_area(color="yellow", fill = "purple1") + labs(y = "Bitcoins Traded", x = "Date")
+```
+
+```{r graph two, echo = TRUE}
+#graph some data 
+ggplot(data=stock_data, aes(x=stock_data$X, y=stock_data$Shares.Traded)) +
+  geom_area(color="darkblue", fill = "orange1") + labs(y = "Shares Traded", x = "Date")
+```
+
+```{r graph three, echo = TRUE}
+#graph some more data
+ggplot(data=google_data, aes(x=google_data$DATE, y=google_data$SEARCHES)) +
+  geom_area(color="darkblue", fill = "green") + labs(y = "Searches for Stocks", x = "Date")
+```
+
+```{r graph four, echo = TRUE}
+#graph some more data
+ggplot(data=bitcoin_data, aes(x=bitcoin_data$Month, y=bitcoin_data$bitcoin)) +
+  geom_area(color="darkblue", fill = "purple") + labs(y = "Bitcoin", x = "Date")
+```
+
+
+```{r graph five, echo = TRUE}
+#graph some more data
+ggplot(data=bitcoin_price, aes(x=bitcoin_price$Date, y=bitcoin_price$Close_Price)) +
+  geom_area(color="darkblue", fill = "pink") + labs(y = "Bitcoin Price", x = "Date")
+```
+
+
+```{r tests six, echo = TRUE}
+#CORRELATION 
+cor(bitcoin_trades$TOTAL,bitcoin_data$bitcoin)
+cor(stock_data$Shares.Traded, google_data$SEARCHES)
+    
+#REGRESSION FUN  
+summary(lm(log10(bitcoin_trades$TOTAL) ~ bitcoin_data$bitcoin + log10(gdp_data$GDP)))
+summary(lm(log10(stock_data$Shares.Traded) ~ google_data$SEARCHES + log10(gdp_data$GDP)))
+
+
+ggplot(data=gdp_data, aes(x=gdp_data$DATE, y=gdp_data$GDP)) +
+  geom_area(color="darkblue", fill = "pink1") + labs(y = "GDP", x = "Date")
+```
 ## Including Plots
 
 You can also embed plots, for example:
