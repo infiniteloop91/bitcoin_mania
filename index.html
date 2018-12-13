@@ -202,10 +202,36 @@ $(document).ready(function () {
 </div>
 
 
+<script type="text/javascript">
+  // When the document is fully rendered...
+  $(document).ready(function() {
+    // ...select all header elements...
+    $('h1, h2, h3, h4, h5').each(function() {
+      // ...and add an id to them corresponding to their 'titles'
+      $(this).attr('id', $(this).html());
+    });
+  });
+</script>
+<p><a href="#I. Introduction"> Go to I. Introduction</a><br> <a href="#II. Data">Go to II. Data</a><br> <a href="#III. Methodology">Go to III. Methodology</a><br> <a href="#IV. Analysis">Go to IV. Analysis</a><br> <a href="#V. Results">Go to V. Results</a><br> <a href="#VI. Conclusion">Go to VI. Conclusion</a><br></p>
+<div id="i.-introduction" class="section level1">
+<h1>I. Introduction</h1>
+<div class="figure">
+<img src="/Users/ERIC/Desktop/BDS_522/BDS_WEBSITE/flowers.jpg" alt="Seven million tulips bloom in Keukhenf" />
+<p class="caption">Seven million tulips bloom in Keukhenf</p>
+</div>
 <p>Each year, seven million tulips bloom in Keukhenf, a public garden located in Southern Holland. Beside windmills, bicycles and chocolate, the small flower is one of the most iconic symbols associated with the Netherlands. While the flower is known for its colorful petals and delicate structure, it decimated the nation’s economy at the beginning of the 17th century.</p>
 <p>The era is known as tulip madness. In the late 1500s, tulips were first imported to the Netherlands from India. Highly coveted for their intense color and their short period of bloom, tulips quickly became one of the highest demanded luxury goods. Companies were soon formed to finance the growth and sales of tulips. More and more people began to speculate on the good in what would be labeled today as a futures market. Many made riches tied up in the speculation of future tulip transactions. By 1637, the tulip bubble burst. Buyers could not pay the prices they had previously agreed to pay. Charles Mackay made this period famous in his book, Extraordinary Popular Delusions and Madness of the Crowd. Mackay labeled this period of speculation as one of the first recorded economic bubbles.</p>
 <p>The United States may not have the same love for Tulips as the Netherlands, but over the last six months more and more Americans are being swept up by the Bitcoin craze. Bitcoin is a digital currency, commonly referred to as a crypto-currency, created in 2009. Unlike hard cash, a sovereign nation or a bank does not back Bitcoin. It is traded peer-to-peer completely online. The market forces of supply and demand purely determine the value. Talk of Bitcoin has taken over social media. Everyone from Warren Buffet to Uber drivers are discussing the potential of Bitcoin.</p>
 <p>Melody Y. Huang from the University of California Berkeley used Google Search Trend data to predict movements of the S&amp;P 500 in the paper Forecasting Stock Market Movements using Google Trend Searches. While she did not find significant results, she did examine the pros and cons of using certain predictive models as a mechanism for stock prediction using search data.</p>
+</div>
+<div id="ii.-data" class="section level1">
+<h1>II. Data</h1>
+</div>
+<div id="iii.-methodology" class="section level1">
+<h1>III. Methodology</h1>
+</div>
+<div id="iv.-analyis" class="section level1">
+<h1>IV. Analyis</h1>
 <pre class="r"><code>ggplot(data=bitcoin_trades, aes(x=bitcoin_trades$Time, y=bitcoin_trades$TOTAL)) +
   geom_area(color=&quot;yellow&quot;, fill = &quot;purple1&quot;) + labs(y = &quot;Bitcoins Traded&quot;, x = &quot;Date&quot;)</code></pre>
 <p><img src="index_files/figure-html/graph%20one-1.png" width="672" /></p>
@@ -277,6 +303,13 @@ summary(lm(log10(bitcoin_trades$TOTAL) ~ bitcoin_data$bitcoin + log10(gdp_data$G
 <pre class="r"><code>ggplot(data=gdp_data, aes(x=gdp_data$DATE, y=gdp_data$GDP)) +
   geom_area(color=&quot;darkblue&quot;, fill = &quot;pink1&quot;) + labs(y = &quot;GDP&quot;, x = &quot;Date&quot;)</code></pre>
 <p><img src="index_files/figure-html/tests%20six-1.png" width="672" /></p>
+</div>
+<div id="v.-results" class="section level1">
+<h1>V. Results</h1>
+</div>
+<div id="vi.-conclusion" class="section level1">
+<h1>VI. Conclusion</h1>
+</div>
 
 
 
