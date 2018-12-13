@@ -109,38 +109,54 @@ dd <- data.frame(mo, yr, amt)
 
 ```
 
-```{r graph one, echo = TRUE}
-ggplot(data=bitcoin_trades, aes(x=bitcoin_trades$Time, y=bitcoin_trades$TOTAL)) +
-  geom_area(color="yellow", fill = "purple1") + labs(y = "Bitcoins Traded", x = "Date")
+```{r graph one, echo = FALSE}
+p <- plot_ly(x = ~bitcoin_trades$Time, y = ~bitcoin_trades$TOTAL, type = 'scatter', mode = 'lines',
+             line = list(color = 'rgb(67, 114, 9)', width = 3)) 
+             
+p
 ```
 
-```{r graph two, echo = TRUE}
+```{r graph two, echo = FALSE}
 #graph some data 
-ggplot(data=stock_data, aes(x=stock_data$X, y=stock_data$Shares.Traded)) +
-  geom_area(color="darkblue", fill = "orange1") + labs(y = "Shares Traded", x = "Date")
+p_2 <- plot_ly(x = ~stock_data$X, y = ~stock_data$Shares.Traded, type = 'scatter', mode = 'lines',
+             line = list(color = 'rgb(67, 114, 9)', width = 3)) 
+p_2
 ```
 
-```{r graph three, echo = TRUE}
+```{r graph three, echo = FALSE}
 #graph some more data
-ggplot(data=google_data, aes(x=google_data$DATE, y=google_data$SEARCHES)) +
-  geom_area(color="darkblue", fill = "green") + labs(y = "Searches for Stocks", x = "Date")
+p_3 <- plot_ly(x = ~google_data$DATE, y = ~google_data$SEARCHES, type = 'scatter', mode = 'lines',
+             line = list(color = 'rgb(67, 114, 9)', width = 3)) 
+p_3
 ```
 
-```{r graph four, echo = TRUE}
+```{r graph four, echo = FALSE}
 #graph some more data
-ggplot(data=bitcoin_data, aes(x=bitcoin_data$Month, y=bitcoin_data$bitcoin)) +
-  geom_area(color="darkblue", fill = "purple") + labs(y = "Bitcoin", x = "Date")
+
+p_4 <- plot_ly(x = ~bitcoin_data$Month, y = ~bitcoin_data$bitcoin, type = 'scatter', mode = 'lines',
+             line = list(color = 'rgb(67, 114, 9)', width = 3)) 
+p_4
 ```
 
 
-```{r graph five, echo = TRUE}
+```{r graph five, echo = FALSE}
 #graph some more data
-ggplot(data=bitcoin_price, aes(x=bitcoin_price$Date, y=bitcoin_price$Close_Price)) +
-  geom_area(color="darkblue", fill = "pink") + labs(y = "Bitcoin Price", x = "Date")
+
+p_3 <- plot_ly(x = ~bitcoin_price$Date, y = ~bitcoin_price$Close_Price, type = 'scatter', mode = 'lines',  line = list(color = 'rgb(67, 114, 9)', width = 3)) 
+p_3
+
+```
+
+```{r graph six, echo = FALSE}
+p_7 <- plot_ly(x = ~gdp_data$DATE, y = ~gdp_data$GDP, type = 'scatter', mode = 'lines',
+             fill = 'tozeroy', line = list(color = 'rgb(67, 114, 9)', width = 3)) 
+             
+p_7
+
 ```
 
 
-```{r tests six, echo = TRUE}
+```{r tests six, echo = FALSE}
 #CORRELATION 
 cor(bitcoin_trades$TOTAL,bitcoin_data$bitcoin)
 cor(stock_data$Shares.Traded, google_data$SEARCHES)
@@ -149,10 +165,11 @@ cor(stock_data$Shares.Traded, google_data$SEARCHES)
 summary(lm(log10(bitcoin_trades$TOTAL) ~ bitcoin_data$bitcoin + log10(gdp_data$GDP)))
 summary(lm(log10(stock_data$Shares.Traded) ~ google_data$SEARCHES + log10(gdp_data$GDP)))
 
+#TTEST
 
-ggplot(data=gdp_data, aes(x=gdp_data$DATE, y=gdp_data$GDP)) +
-  geom_area(color="darkblue", fill = "pink1") + labs(y = "GDP", x = "Date")
+
 ```
+
 
 
 # V. Results
