@@ -1,10 +1,9 @@
 ---
-title: "Introduction"
+title: "Madness of the Crowd: From Tulip Mania to Bitcoin Bubbles"
 author: "By Eric Lyons"
 date: "12/12/2018"
 output: html_document
 ---
-#Madness of the Crowd: From Tulip Mania to Bitcoin Bubbles
 
 <script type="text/javascript">
   // When the document is fully rendered...
