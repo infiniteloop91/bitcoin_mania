@@ -125,31 +125,55 @@ dd <- data.frame(mo, yr, amt)
 ```
 
 ```{r graph one, echo = FALSE}
-p <- plot_ly(x = ~bitcoin_trades$Time, y = ~bitcoin_trades$TOTAL, type = 'scatter', mode = 'lines',
-             line = list(color = 'rgb(67, 114, 9)', width = 3)) 
+p <- plot_ly(x = ~bitcoin_trades$Time, 
+             y = ~bitcoin_trades$TOTAL, 
+             type = 'scatter', 
+             mode = 'lines',
+             line = list(color = 'rgb(67, 114, 9)', width = 3)) %>%
+    layout(title="Volume of Bitcoin Trades",
+           xaxis=list(title="Date"),
+                       yaxis=list(title="Trades"))
              
 p
 ```
 
 ```{r graph two, echo = FALSE}
 #graph some data 
-p_2 <- plot_ly(x = ~stock_data$X, y = ~stock_data$Shares.Traded, type = 'scatter', mode = 'lines',
-             line = list(color = 'rgb(67, 114, 9)', width = 3)) 
+p_2 <- plot_ly(x = ~stock_data$X, 
+               y = ~stock_data$Shares.Traded, 
+               type = 'scatter', 
+               mode = 'lines',
+             line = list(color = 'rgb(67, 114, 9)', width = 3)) %>%
+    layout(title="Volume of Stock Trades",
+           xaxis=list(title="Date"),
+                       yaxis=list(title="Trades"))
 p_2
 ```
 
 ```{r graph three, echo = FALSE}
 #graph some more data
-p_3 <- plot_ly(x = ~google_data$DATE, y = ~google_data$SEARCHES, type = 'scatter', mode = 'lines',
-             line = list(color = 'rgb(67, 114, 9)', width = 3)) 
+p_3 <- plot_ly(x = ~google_data$DATE, 
+               y = ~google_data$SEARCHES, 
+               type = 'scatter', 
+               mode = 'lines',
+              line = list(color = 'rgb(67, 114, 9)', width = 3)) %>%
+    layout(title="Searches for the word stocks",
+           xaxis=list(title="Date"),
+                       yaxis=list(title="Searches"))
 p_3
 ```
 
 ```{r graph four, echo = FALSE}
 #graph some more data
 
-p_4 <- plot_ly(x = ~bitcoin_data$Month, y = ~bitcoin_data$bitcoin, type = 'scatter', mode = 'lines',
-             line = list(color = 'rgb(67, 114, 9)', width = 3)) 
+p_4 <- plot_ly(x = ~bitcoin_data$Month, 
+               y = ~bitcoin_data$bitcoin, 
+               type = 'scatter',
+               mode = 'lines',
+              line = list(color = 'rgb(67, 114, 9)', width = 3)) %>%
+    layout(title="Bitcoin Searches",
+           xaxis=list(title="Date"),
+                       yaxis=list(title="Searches for Bitcoin"))
 p_4
 ```
 
@@ -157,14 +181,28 @@ p_4
 ```{r graph five, echo = FALSE}
 #graph some more data
 
-p_3 <- plot_ly(x = ~bitcoin_price$Date, y = ~bitcoin_price$Close_Price, type = 'scatter', mode = 'lines',  line = list(color = 'rgb(67, 114, 9)', width = 3)) 
+p_3 <- plot_ly(
+  x = ~bitcoin_price$Date, 
+  y = ~bitcoin_price$Close_Price, 
+  type = 'scatter', 
+  mode = 'lines',  
+  line = list(color = 'rgb(67, 114, 9)', width = 3)) %>%
+    layout(title="Bitcoin Prices",
+           xaxis=list(title="Date"),
+                       yaxis=list(title="Price of Bitcoin"))
 p_3
 
 ```
 
 ```{r graph six, echo = FALSE}
-p_7 <- plot_ly(x = ~gdp_data$DATE, y = ~gdp_data$GDP, type = 'scatter', mode = 'lines',
-             fill = 'tozeroy', line = list(color = 'rgb(67, 114, 9)', width = 3)) 
+p_7 <- plot_ly(x = ~gdp_data$DATE, 
+               y = ~gdp_data$GDP, 
+               type = 'scatter', 
+               mode = 'lines',
+                fill = 'tozeroy', fillcolor = 'rgb(154, 246, 144)',line = list(color = 'rgb(67, 114, 9)', width = 3)) %>%
+    layout(title="US GDP",
+           xaxis=list(title="Date"),
+                       yaxis=list(title="GDP"))
              
 p_7
 
