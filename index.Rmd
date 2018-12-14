@@ -198,7 +198,26 @@ p_4 <- plot_ly(x = ~bitcoin_data$Month,
 p_4
 ```
 
+```{r test test}
+p_10 <- plot_ly(x = ~bitcoin_data$Month, 
+               y = ~bitcoin_data$bitcoin, 
+               type = 'scatter',
+               mode = 'lines',
+              line = list(color = 'rgb(67, 114, 9)', 
+                          width = 3),
+              name = 'bitcoin') %>%
+    layout(title="Compared Searches",
+           xaxis=list(title="Date"),
+                       yaxis=list(title="Searches")) %>%
+  add_trace(y = ~(google_data$SEARCHES/10), 
+            type = 'scatter', 
+            mode = 'lines', 
+            line = list(color = 'rgb(154, 246, 144)',
+            width = 3),
+            name = 'Stocks/10')
 
+p_10
+```
 
 
 ```{r graph six, echo = FALSE}
@@ -235,6 +254,7 @@ grangertest(bitcoin_data$bitcoin ~ bitcoin_trades$TOTAL, order=1)
 grangertest(stock_data$Shares.Traded ~ google_data$SEARCHES, order=1)
 
 ```
+
 
 
 
