@@ -46,6 +46,8 @@ The first test to examine the relationship or association between the depedent v
 
 The second test used was linear regression. 
 
+The final test used was the indepedent-samples t-test. This procedure compares the means of two samples to determine if there is a statisitcally significant difference between the two. 
+
 # IV. Analyis {style="color: red;"}
 
 
