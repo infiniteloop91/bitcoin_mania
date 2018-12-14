@@ -17,12 +17,12 @@ output: html_document
 </script>
 
 
-<a href="#I. Introduction"> Go to I. Introduction</a><br>
-<a href="#II. Data">Go to II. Data</a><br>
-<a href="#III. Methodology">Go to III. Methodology</a><br>
-<a href="#IV. Analysis">Go to IV. Analysis</a><br>
-<a href="#V. Results">Go to V. Results</a><br>
-<a href="#VI. Conclusion">Go to VI. Conclusion</a><br>
+<a href="#I. Introduction" style="color: #437209"> <strong> Go to I. Introduction</strong></a><br>
+<a href="#II. Data" style="color: #437209"><strong>Go to II. Data</strong></a><br>
+<a href="#III. Methodology" style="color: #437209"><strong>Go to III. Methodology</strong></a><br>
+<a href="#IV. Analysis" style="color: #437209"><strong>Go to IV. Analysis</strong></a><br>
+<a href="#V. Results" style="color: #437209"><strong>Go to V. Results</strong></a><br>
+<a href="#VI. Conclusion" style="color: #437209"><strong> Go to VI. Conclusion</strong></a><br>
 
 
 # I. Introduction
@@ -35,11 +35,18 @@ output: html_document
 
   Melody Y. Huang from the University of California Berkeley used Google Search Trend data to predict movements of the S&P 500 in the paper Forecasting Stock Market Movements using Google Trend Searches. While she did not find significant results, she did examine the pros and cons of using certain predictive models as a mechanism for stock prediction using search data. 
 
-# II. Data
+# II. Data 
+
+  The data for the research came from a variety of sources. The independent variables came from Google Search Trends. Google Search Trends is a tool used for people to see the demand or coverage of a given topic. Google released the product in 2004. The tool was expanded to allow users to compare search trends for multiple phrases as well as limit the search to individuals in a given geographic area. The phrases are case-sensitive. The two used for this project were "stocks" and "bitcoin". The case-sensitive nature to these resutls are also one of the main drawbacks. If an individual is searching for stocks to purchase or how to buy bitcoin, there are thousands of different variations that could be typed out. This also rules out individuals who do not use Google as a medium to get to a marketplace to buy/sell securities or bitcoin.
+  The second main source of data was from 
+
 
 # III. Methodology
+The first test to examine the relationship or association between the depedent variables of securities traded and bitcoin products traded and the indepdent variables of the number of Google searches related to the two was a basic correlation. Correlations range from -1 to 1. They measure the strength and linear direction of two variables. 
 
-# IV. Analyis
+The second test used was linear regression. 
+
+# IV. Analyis {style="color: red;"}
 
 
 ```{r load data, include = FALSE}
@@ -158,14 +165,20 @@ p_7
 
 ```{r tests six, echo = FALSE}
 #CORRELATION 
-cor(bitcoin_trades$TOTAL,bitcoin_data$bitcoin)
-cor(stock_data$Shares.Traded, google_data$SEARCHES)
+cor_1 <- cor(bitcoin_trades$TOTAL,bitcoin_data$bitcoin)
+cor_2 <- cor(stock_data$Shares.Traded, google_data$SEARCHES)
+
+#REGRESSION FUN  I
+summary(lm(log10(bitcoin_trades$TOTAL) ~ bitcoin_data$bitcoin))
+summary(lm(log10(stock_data$Shares.Traded) ~ google_data$SEARCHES ))
     
-#REGRESSION FUN  
+#REGRESSION FUN  II
 summary(lm(log10(bitcoin_trades$TOTAL) ~ bitcoin_data$bitcoin + log10(gdp_data$GDP)))
 summary(lm(log10(stock_data$Shares.Traded) ~ google_data$SEARCHES + log10(gdp_data$GDP)))
 
 #TTEST
+t.test(bitcoin_trades$TOTAL,stock_data$Shares.Traded)
+
 
 
 ```
@@ -175,3 +188,7 @@ summary(lm(log10(stock_data$Shares.Traded) ~ google_data$SEARCHES + log10(gdp_da
 # V. Results
 
 # VI. Conclusion
+
+&nbsp;
+<hr />
+<p style="text-align: center;">A work by <a href="https://github.com/infiniteloop91">The Eric Lyons</a></p>
