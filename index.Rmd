@@ -42,13 +42,18 @@ output: html_document
 
 
 # III. Methodology
-The first test to examine the relationship or association between the depedent variables of securities traded and bitcoin products traded and the indepdent variables of the number of Google searches related to the two was a basic correlation. Correlations range from -1 to 1. They measure the strength and linear direction of two variables. 
+The first test to examine the relationship or association between the dependent variables of securities traded and bitcoin products traded and the independent variables of the number of Google searches related to the two was a basic correlation. Correlations range from -1 to 1. They measure the strength and linear direction of two variables. 
 
-The second test used was linear regression. 
+The second test used was linear regression. Linear regressions model the linear relationship between two variables. In the model there is a dependent variable, which is the y-value, or the outcome and the dependent variable is the indicator or x-value. How great is the variance of the dependent variable explained by the independent variable in the sample. 
 
-The final test used was the indepedent-samples t-test. This procedure compares the means of two samples to determine if there is a statisitcally significant difference between the two. 
+In this project for the first set, the dependent variable was the number of bitcoins traded and the independent variable was the volume of Google searches for the word “bitcoin”. For the second series of tests, the dependent value was the number of equity securities traded and the independent variable was the number of Google searches for the word “stocks”. 
 
-# IV. Analyis {style="color: red;"}
+These tests were run again with a second independent or predictor variable. For this series, US GDP was factored in, since it is an indicator for the health of the economy. This value was transformed with a log function in order to measure the percent change of the US GDP. 
+
+The final series of test was conducted using a Granger Causality test. Professor Sir Clive Granger developed this test in the 1960s. It is based on the premise that if a signal X1 "Granger-causes" (or "G-causes") a signal X2, then past values of X1 should contain information that helps predict X2 above and beyond the information contained in past values of X2 alone. 
+
+
+# IV. Analyis 
 
 
 ```{r load data, include = FALSE}
@@ -172,23 +177,29 @@ cor_1 <- cor(bitcoin_trades$TOTAL,bitcoin_data$bitcoin)
 cor_2 <- cor(stock_data$Shares.Traded, google_data$SEARCHES)
 
 #REGRESSION FUN  I
-summary(lm(log10(bitcoin_trades$TOTAL) ~ bitcoin_data$bitcoin))
-summary(lm(log10(stock_data$Shares.Traded) ~ google_data$SEARCHES ))
+summary(lm(bitcoin_trades$TOTAL ~ bitcoin_data$bitcoin))
+summary(lm(bitcoin_trades$TOTAL ~ bitcoin_data$bitcoin * log10(gdp_data$GDP)))
     
 #REGRESSION FUN  II
-summary(lm(log10(bitcoin_trades$TOTAL) ~ bitcoin_data$bitcoin + log10(gdp_data$GDP)))
-summary(lm(log10(stock_data$Shares.Traded) ~ google_data$SEARCHES + log10(gdp_data$GDP)))
+summary(lm(stock_data$Shares.Traded ~ google_data$SEARCHES))
+summary(lm(stock_data$Shares.Traded ~ google_data$SEARCHES * log10(gdp_data$GDP)))
 
 #Granger Causality Test
-grangertest(bitcoin_data$bitcoin ~ bitcoin_trades$TOTAL, order=2)
+grangertest(bitcoin_data$bitcoin ~ bitcoin_trades$TOTAL, order=1)
 
-grangertest(stock_data$Shares.Traded ~ google_data$SEARCHES, order=2)
+grangertest(stock_data$Shares.Traded ~ google_data$SEARCHES, order=1)
 
 ```
 
 
 
 # V. Results
+
+
+
+The Granger Causality test for Bitcoin searches and the volume of Bitcoin trades produced an -0.5935 F-test value and a p-value of .4458. Given this evidence and the high p-value we cannot reject the null hypothesis that Google Search trends do not help predict future trade volume for bitcoin. 
+
+The Granger test was run on the Google search trends for stocks and the volume of trades of equity securities. The test produced a .0197 F-test value and a .8892 p-value. So, again we cannot reject the null hypothesis that Google Search trends do help help predict future trade volume for securities. 
 
 # VI. Conclusion
 
