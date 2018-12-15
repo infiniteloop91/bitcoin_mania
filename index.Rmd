@@ -207,7 +207,7 @@ p_10 <- plot_ly(x = ~bitcoin_data$Month,
                mode = 'lines',
               line = list(color = 'rgb(67, 114, 9)', 
                           width = 3),
-              name = 'bitcoin') %>%
+              name = 'Bitcoin') %>%
     layout(title="Compared Searches",
            xaxis=list(title="Date"),
                        yaxis=list(title="Searches")) %>%
