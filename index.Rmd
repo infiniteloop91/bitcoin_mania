@@ -123,8 +123,10 @@ p_3
 # II. Data 
 
   The data for the research came from a variety of sources. The independent variables came from Google Search Trends. Google Search Trends is a tool used for people to see the demand or coverage of a given topic. Google released the product in 2004. The tool was expanded to allow users to compare search trends for multiple phrases as well as limit the search to individuals in a given geographic area. The phrases are case-sensitive. The two used for this project were "stocks" and "bitcoin". The case-sensitive nature to these resutls are also one of the main drawbacks. If an individual is searching for stocks to purchase or how to buy bitcoin, there are thousands of different variations that could be typed out. This also rules out individuals who do not use Google as a medium to get to a marketplace to buy/sell securities or bitcoin.
-  The second main source of data was from 
-
+  The volume of stock trades per day was pulled from the New York Stock Exchage's public data set. The data is specifically from the Volume Summary. This set provides a count of total trades, volume, and dollar volume by market center (exchange) in each NYSE-traded issue. The only metric used for the analysis was totle trades. 
+  The volume of Bitcoin trades was acquired from data.bitcoinity.org. This organization keeps track of hundreds of different blockchain metrics, but the trade volume was used for the project. The data set breaksdown trade volume by individual coin type or brand, but the sum of all the various coins was used for the analysis. 
+  The price of bitcoin over time was taken directly from bitcoin.com. This only takes into account the price of the main cryptocurrency Bitcoin and does not reflect the price of the various alt coins offered on the market. 
+  The US GDP data was gathered from tradingeconomics.com. Trading Economics is a company that provides users access to over 20 million economic indicators. 
 
 # III. Methodology
 The first test to examine the relationship or association between the dependent variables of securities traded and bitcoin products traded and the independent variables of the number of Google searches related to the two was a basic correlation. Correlations range from -1 to 1. They measure the strength and linear direction of two variables. 
@@ -198,7 +200,7 @@ p_4 <- plot_ly(x = ~bitcoin_data$Month,
 p_4
 ```
 
-```{r test test}
+```{r test test,  echo = FALSE}
 p_10 <- plot_ly(x = ~bitcoin_data$Month, 
                y = ~bitcoin_data$bitcoin, 
                type = 'scatter',
@@ -238,8 +240,41 @@ p_7
 ```{r tests six, echo = FALSE}
 #CORRELATION 
 cor_1 <- cor(bitcoin_trades$TOTAL,bitcoin_data$bitcoin)
-cor_2 <- cor(stock_data$Shares.Traded, google_data$SEARCHES)
 
+cor_1
+
+
+p_cor_1 <- plot_ly(x = ~bitcoin_data$bitcoin, 
+                   y = ~bitcoin_trades$TOTAL,
+                   mode="markers",
+                   type = 'scatter',
+        marker = list(size = 6,
+                       color = 'rgb(154, 246, 144)',
+                       line = list(color = 'rgb(67, 114, 9)',
+                                   width = 2))) %>%
+  layout(title = 'Correlation between Search Data and Bitcoin Trades',
+         yaxis = list(title = "Bitcoin Trades"),
+         xaxis = list(title = "Search Data"))
+
+p_cor_1
+
+
+cor_2 <- cor(stock_data$Shares.Traded, google_data$SEARCHES)
+cor_2
+
+p_cor_2 <- plot_ly(x = ~google_data$SEARCHES, 
+                   y = ~stock_data$Shares.Traded,
+                   mode="markers",
+                   type = 'scatter',
+        marker = list(size = 6,
+                       color = 'rgb(154, 246, 144)',
+                       line = list(color = 'rgb(67, 114, 9)',
+                                   width = 2))) %>%
+  layout(title = 'Correlation between Search Data and Stock Trades',
+         yaxis = list(title = "Stock Trades"),
+         xaxis = list(title = "Search Data"))
+
+p_cor_2
 #REGRESSION FUN  I
 summary(lm(bitcoin_trades$TOTAL ~ bitcoin_data$bitcoin))
 summary(lm(bitcoin_trades$TOTAL ~ bitcoin_data$bitcoin * log10(gdp_data$GDP)))
