@@ -23,6 +23,8 @@ output: html_document
 <a href="#IV. Analysis" style="color: #437209"><strong>Go to IV. Analysis</strong></a><br>
 <a href="#V. Results" style="color: #437209"><strong>Go to V. Results</strong></a><br>
 <a href="#VI. Conclusion" style="color: #437209"><strong> Go to VI. Conclusion</strong></a><br>
+<a href="#VI. Bibliography" style="color: #437209"><strong> Go to VII. Bibliography</strong></a><br>
+  
 
 ```{r load data, include = FALSE}
 library(ggplot2)
@@ -94,13 +96,20 @@ dd <- data.frame(mo, yr, amt)
 
 # I. Introduction
 
-![A photo](https://github.com/infiniteloop91/bitcoin_mania/blob/master/flowers.jpg?raw=true)
+Each year, seven million tulips bloom in Keukhenf, a public garden located in Southern Holland. Beside windmills, bicycles and chocolate, the small flower is one of the most iconic symbols associated with the Netherlands. While the tulip is known for its colorful petals and delicate structure, it decimated the nation’s economy at the beginning of the 17th century.	
 
-  Each year, seven million tulips bloom in Keukhenf, a public garden located in Southern Holland. Beside windmills, bicycles and chocolate, the small flower is one of the most iconic symbols associated with the Netherlands. While the flower is known for its colorful petals and delicate structure, it decimated the nation’s economy at the beginning of the 17th century.
 
-  The era is known as tulip madness. In the late 1500s, tulips were first imported to the Netherlands from India. Highly coveted for their intense color and their short period of bloom, tulips quickly became one of the highest demanded luxury goods. Companies were soon formed to finance the growth and sales of tulips. More and more people began to speculate on the good in what would be labeled today as a futures market. Many made riches tied up in the speculation of future tulip transactions. By 1637, the tulip bubble burst. Buyers could not pay the prices they had previously agreed to pay. Charles Mackay made this period famous in his book, Extraordinary Popular Delusions and Madness of the Crowd. Mackay labeled this period of speculation as one of the first recorded economic bubbles. 
 
-  The United States may not have the same love for Tulips as the Netherlands, but over the last six months more and more Americans are being swept up by the Bitcoin craze. Bitcoin is a digital currency, commonly referred to as a crypto-currency, created in 2009. Unlike hard cash, a sovereign nation or a bank does not back Bitcoin. It is traded peer-to-peer completely online. The market forces of supply and demand purely determine the value. Talk of Bitcoin has taken over social media. Everyone from Warren Buffet to Uber drivers are discussing the potential of Bitcoin. 
+<center>
+![Keukhenf in Holland. Photo courtest of Holland.com](https://github.com/infiniteloop91/bitcoin_mania/blob/master/flowers.jpg?raw=true)
+</center>
+
+
+The era is known as tulip madness. In the late 1500s, tulips were first imported to the Netherlands from India. Highly coveted for their intense color and their short period of bloom, tulips quickly became one of the highest demanded luxury goods. Companies were soon formed to finance the growth and sales of tulips. More and more people began to speculate on the good in what would be labeled today as a futures market. Many made fortunes tied up in the speculation of future tulip transactions. By 1637, the tulip bubble burst. Buyers could not pay the prices they had previously agreed to pay. Charles Mackay made this period famous in his book, Extraordinary Popular Delusions and Madness of the Crowd. Mackay labeled this period of speculation as one of the first recorded economic bubbles. 
+
+
+The United States may not have the same love for Tulips as the Netherlands, but in 2017 Americans were swept away by the Bitcoin craze. Bitcoin is a digital currency, commonly referred to as a crypto-currency, created in 2009. Unlike hard cash a sovereign nation or a bank does not back Bitcoin. It is traded peer-to-peer completely online that utilizes block chain technology. The market forces of supply and demand purely determine the value. Talk of Bitcoin has taken over social media. Everyone from Warren Buffet to the author’s Uber driver has discussed the potential of Bitcoin. The price increased by 200-percent in 2017 and quickly crashed in the summer of 2018 (Bitcoin Price, 2018).
+
   
 ```{r graph five, echo = FALSE}
 #graph some more data
@@ -117,35 +126,42 @@ p_3 <- plot_ly(
 p_3
 
 ```
+<br>
+While anyone may buy or sell securities with the rise of online banking and mobile applications such as Robinhood and Acorn, most people still have a professional stock broker or financial advisor manage their money. There is no intermediary with Bitcoin apps like Coinbase, Kraken, and Gemini. The question then arises: do people hear about Bitcoin while talking to a friend, watching television, or listening to a podcast and then use Google to find out where they can purchase or trade the crypto currency. Based on this question or theory it is hypothesized that there is a stronger correlation between Google search trends for and the volume of Bitcoin transactions than the volume of traditional equity securities transactions. The null hypothesis would be that the associations/correlations are equivalent.
 
-  Melody Y. Huang from the University of California Berkeley used Google Search Trend data to predict movements of the S&P 500 in the paper Forecasting Stock Market Movements using Google Trend Searches. While she did not find significant results, she did examine the pros and cons of using certain predictive models as a mechanism for stock prediction using search data. 
+
+In 2008, researchers from Google began to use search data to attempt to predict the overall prevalence of the flu in given geographic areas. The model was incorrect for 100 out of the first 108 weeks following its initial launch. The main issue with the model was that the model was susceptible to false positives that included users searching for topics related to flu-like symptoms, but were not actual cases of the flu. The second issue was that the model could not deal with the time lag between when a person searches for flu related symptoms and is actually infected with the flu (Salzberg, 2014).
+	
+	
+The Google Flu Trends project was released to the public and the results were published in the journal Nature in 2014. It was one of the first large scale research efforts that leverages publically available search data to predict future behavior. Melody Y. Huang and other members of the University of California Los Angeles’ statistics department used leveraged this search trend data in attempt to predict movements of the S&P 500 in the paper Forecasting Stock Market Movements using Google Trend Searches. While the team did not find significant results and could not produce positive returns using financial backtests, they did examine the pros and cons of using various predictive models as a mechanism for stock prediction using search data. 
+
 
 # II. Data 
+The data for the research came from a variety of sources. The independent variables came from Google Search Trends. Google Search Trends is a tool used for people to see the demand or coverage of a given topic. Google released the product in 2004. The tool was expanded to allow users to compare search trends for multiple phrases as well as limit the search to individuals in a given geographic area. The phrases are case-sensitive. The two used for this project were "stocks" and "Bitcoin". The case-sensitive nature to these results is also one of the main drawbacks. If an individual is searching for stocks to purchase or how to buy Bitcoin, there are thousands of different variations that could be typed out. This also rules out individuals who do not use Google as a medium to get to a marketplace to buy/sell securities or Bitcoin.
 
-  The data for the research came from a variety of sources. The independent variables came from Google Search Trends. Google Search Trends is a tool used for people to see the demand or coverage of a given topic. Google released the product in 2004. The tool was expanded to allow users to compare search trends for multiple phrases as well as limit the search to individuals in a given geographic area. The phrases are case-sensitive. The two used for this project were "stocks" and "bitcoin". The case-sensitive nature to these resutls are also one of the main drawbacks. If an individual is searching for stocks to purchase or how to buy bitcoin, there are thousands of different variations that could be typed out. This also rules out individuals who do not use Google as a medium to get to a marketplace to buy/sell securities or bitcoin.
-  The volume of stock trades per day was pulled from the New York Stock Exchage's public data set. The data is specifically from the Volume Summary. This set provides a count of total trades, volume, and dollar volume by market center (exchange) in each NYSE-traded issue. The only metric used for the analysis was totle trades. 
-  The volume of Bitcoin trades was acquired from data.bitcoinity.org. This organization keeps track of hundreds of different blockchain metrics, but the trade volume was used for the project. The data set breaksdown trade volume by individual coin type or brand, but the sum of all the various coins was used for the analysis. 
-  The price of bitcoin over time was taken directly from bitcoin.com. This only takes into account the price of the main cryptocurrency Bitcoin and does not reflect the price of the various alt coins offered on the market. 
-  The US GDP data was gathered from tradingeconomics.com. Trading Economics is a company that provides users access to over 20 million economic indicators. 
+
+The volume of stock trades per day was pulled from the New York Stock Exchange’s public data set. The data is specifically from the Volume Summary. This set provides a count of total trades, volume, and dollar volume by market center (exchange) in each NYSE-traded issue. The only metric used for the analysis was total trades. 
+
+
+The volume of Bitcoin trades was acquired from data.bitcoinity.org. This organization keeps track of hundreds of different block chain metrics, but the trade volume was used for the project. The data set breaks down trade volume by individual coin type or brand, but the sum of all the various coins was used for the analysis.  The price of Bitcoin over time was taken directly from bitcoin.com. This only takes into account the price of the main crypto currency Bitcoin and does not reflect the price of the various alt coins offered on the market.  The US GDP data was gathered from tradingeconomics.com. Trading Economics is a company that provides users access to over 20 million economic indicators. 
+ 
 
 # III. Methodology
-The first test to examine the relationship or association between the dependent variables of securities traded and bitcoin products traded and the independent variables of the number of Google searches related to the two was a basic correlation. Correlations range from -1 to 1. They measure the strength and linear direction of two variables. 
+The first test to examine the relationship or association between the dependent variables of securities traded and Bitcoin products traded and the independent variables of the number of Google searches related to the two was a basic correlation. Correlations range from -1 to 1. They measure the strength and linear direction of two variables. 
+
 
 The second test used was linear regression. Linear regressions model the linear relationship between two variables. In the model there is a dependent variable, which is the y-value, or the outcome and the dependent variable is the indicator or x-value. How great is the variance of the dependent variable explained by the independent variable in the sample. 
 
-In this project for the first set, the dependent variable was the number of bitcoins traded and the independent variable was the volume of Google searches for the word “bitcoin”. For the second series of tests, the dependent value was the number of equity securities traded and the independent variable was the number of Google searches for the word “stocks”. 
 
-These tests were run again with a second independent or predictor variable. For this series, US GDP was factored in, since it is an indicator for the health of the economy. This value was transformed with a log function in order to measure the percent change of the US GDP. 
+In this project for the first set, the dependent variable was the number of Bitcoin traded and the independent variable was the volume of Google searches for the word “Bitcoin”. For the second series of tests, the dependent value was the number of equity securities traded and the independent variable was the number of Google searches for the word “stocks”. 
 
-The final series of test was conducted using a Granger Causality test. Professor Sir Clive Granger developed this test in the 1960s. It is based on the premise that if a signal X1 "Granger-causes" (or "G-causes") a signal X2, then past values of X1 should contain information that helps predict X2 above and beyond the information contained in past values of X2 alone. 
+
+These tests were run again with a second independent or predictor variable. For this series, US GDP was factored in, since it is an indicator for the health of the economy. This value was transformed with a log function in order to measure the percent change of the US GDP. It was input into both linear models as an interaction variable. The reasoning behind this was that GDP as a proxy for economic health may influence if people are searching for stocks to buy when the economy is good. The counter would be that Bitcoin and security trades would increase if the economy was bad and people wanted to take their money out of the market. Linear models are limited in analyzing time series data based on the fact that they cannot factor in a temporal lag. Researchers could shift the data frames to input a lag, but this can also be done using a Granger Causality test. 
+Professor Sir Clive Granger developed this test in the 1960s. It is based on the premise that if a signal X causes a signal Y, past values of X should contain information that predicts Y more accurately than just the information contained in past Y values. 
+ 
 
 
 # IV. Analyis 
-
-
-
-
-
 
 ```{r graph one, echo = FALSE}
 p <- plot_ly(x = ~bitcoin_trades$Time, 
@@ -294,14 +310,46 @@ grangertest(stock_data$Shares.Traded ~ google_data$SEARCHES, order=1)
 
 
 # V. Results
+Both correlations produced negative correlations with minimal effects. The correlation coefficient for Google Search Trends and the number of Bitcoin trades was -.28. The correlation coefficient for Google Search Trends and the volume of equity securities traded was  -.24. The hypothesis was based on the premise that there was a positive relationship between search trends and the volume of trades for both Bitcoin and equity securities, but this was proven to be false. These findings suggest that as more Google searches go up, trading volume goes down. This could be attributed to a temporal gap between when individuals search the phrases “stocks” or “Bitcoin”, but the lag concept will be tested with the Granger test. 
 
 
+The first linear regression model used search trends as the independent variable and the number of Bitcoin traded as the dependent variable. Based on the coefficients, if there were zero searches there would be 4320860 Bitcoin transactions. The coefficient for the number of searches was -74464. For every search there would be a decrease of 74464 transactions. The p-value of the regression model was 0.07261, so it did not pass the significance threshold of .05 noted in the research design.
 
-The Granger Causality test for Bitcoin searches and the volume of Bitcoin trades produced an -0.5935 F-test value and a p-value of .4458. Given this evidence and the high p-value we cannot reject the null hypothesis that Google Search trends do not help predict future trade volume for bitcoin. 
 
-The Granger test was run on the Google search trends for stocks and the volume of trades of equity securities. The test produced a .0197 F-test value and a .8892 p-value. So, again we cannot reject the null hypothesis that Google Search trends do help help predict future trade volume for securities. 
+For the second iteration of the model, the log of US GDP was added as an interaction variable to see if the health of US economy played a factor. This increased the p-value to .26 again insufficient for the set significance threshold. The number of searchers became a positive factor in terms of the volume of trades based on the coefficient, but GDP and GDP in combination with searches were negative. 
+
+
+For the second regression model, the number of Google searches for the word “stocks” was the independent variable and the volume of equity trades was the dependent variable. This model had a p-value of .13, which failed to pass the threshold for statistical significance. Based on the intercept, if there were zero Google searches for “stocks” there would be 3562809252 transactions of equity securities. For every Google Search the number of expected transactions would decrease by 2449460. The number of Google searches had a negative coefficient.
+
+
+Again this model was adjusted and the log of GDP was added as an interaction variable. This model did produce a significant p-value of .045. Similar to the first model, when GDP was factored in the number of searches because a positive factor based on the coefficient of 1998.06. When GDP interacted with the number of searches though, the effect was negative on the volume of transactions. The fact that GDP has a negative relationship with the volume of equity contradicts the Disposition Effect. The Disposition Effect states that people sell stocks that earn money and hold onto losing stocks hoping that they will turnaround and recoup some loses. If US GDP increases companies should theoretically earning profits that should theoretically increase the value of their stocks and cause selling to increase. This relationship may suggest that people hold on to stocks when the economy is doing well. 
+
+
+The Granger Causality test for Bitcoin searches and the volume of Bitcoin trades produced a -0.5935 F-test value and a p-value of .4458. Given this evidence and the high p-value we cannot reject the null hypothesis that Google Search trends do not help predict future trade volume for Bitcoin. 
+The Granger test was run on the Google search trends for stocks and the volume of trades of equity securities. The test produced a .0197 F-test value and a .8892 p-value. So, again we cannot reject the null hypothesis that Google Search trends do help predict future trade volume for securities. 
+
 
 # VI. Conclusion
+Based on the analysis, the hypothesis that there is a stronger correlation between Google search trends for and the volume of Bitcoin transactions than the volume of traditional equity securities transactions can be rejected. There is little association between search data and the number of transactions. Given the evidence provided by both regression models, there is a negative relationship between the number of Google searches and transactions. The data is limited by the fact it is case sensitive and there are millions of different variations individuals could search for Bitcoin or stock related topics. Also, both the equity and Bitcoin market are greatly influenced by bot and high-frequency-trading activity. As seen in the flash crash in the 2000s, these two factors play a large role in the volume of transactions. This model is an extremely simplified version of market factors. Markets are interdependent on nearly an infinite number of parameters –some of which cannot be measured quantitatively. The use of search data for predicting behavior may be extremely useful in more isolated or more target spaces with more detailed models. While the results were inconclusive, they can be used built off of or as a reference point for future research. 
+
+
+# VI. Bibliography 
+
+Ball, Philip. "Counting Google Searches Predicts Market Movements." Nature, 2013. doi:10.1038/nature.2013.12879.
+
+Huang, Melody Y., Randall Rojas, and Patrick Convery. "Forecasting Stock Market Movements Using Google Trend         Searches." MS, University of California, Los Angeles. 2013.                                                      https://editorialexpress.com/cgi-bin/conference/download.cgi?db_name=SNDE2018&paper_id=100.
+
+Lazer, D., R. Kennedy, G. King, and A. Vespignani. "The Parable of Google Flu: Traps in Big Data Analysis."          Science 343, no. 6176 (2014): 1203-205. doi:10.1126/science.1248506.
+
+Mackay, Charles, Martin S. Fridson, and Josef Penso De La Vega. Extraordinary Popular Delusions and the Madness      of Crowds. New York: Wiley, 1996.
+
+Montag, Ali. "Warren Buffett Explains One Thing People Still Don't Understand about Bitcoin." CNBC. May 01, 2018.     Accessed December 15, 2018. https://www.cnbc.com/2018/05/01/warren-buffett-bitcoin-isnt-an-investment.html.
+
+Salzberg, Steven. "Why Google Flu Is A Failure." Forbes. March 23, 2014. Accessed December 15, 2018.                 https://www.forbes.com/sites/stevensalzberg/2014/03/23/why-google-flu-is-a-failure/#67855a855535.
+
+Seth, Anil. "Granger Causality." Scholarpedia. Accessed December 15, 2018.                                           http://www.scholarpedia.org/article/Granger_causality.
+
+"Tulips and Flower Bulbs in the Netherlands." Visit the Beautiful Cities of the Dutch Golden Age - Holland.com.      June 04, 2018. Accessed December 15, 2018. https://www.holland
 
 &nbsp;
 <hr />
