@@ -142,7 +142,9 @@ The Google Flu Trends project was released to the public and the results were pu
 # II. Data 
 The data for the project came from a variety of sources. The independent variables came from Google search trends. Google Search Trends is a tool that allows users to see the demand or coverage of a given topic in terms of the number of Google searches. Google released the product in 2004. The tool was expanded to allow users to compare search trends for multiple phrases as well as limit the query to individuals in a given geographic area. The phrases are case-sensitive. The two phrases used for this project were "stocks" and "Bitcoin". The case-sensitive nature of these results is also one of the main drawbacks. If an individual is searches for “stocks to purchase” or “how to buy Bitcoin”, there are thousands of different variations that could be typed out. This also rules out individuals who do not use Google as a medium to get to a marketplace to buy/sell securities or Bitcoin.
 
-
+<center>
+![Keukhenf in Holland. Photo courtest of Holland.com](https://github.com/infiniteloop91/bitcoin_mania/blob/master/Google_search_trends.png?raw=true)
+</center>
 The volume of stock trades per day was pulled from the New York Stock Exchange’s public data set. The data is specifically from the Volume Summary. This set provides a count of total trades and total volume per day. The only metric used for the analysis was total trades. 
 
 
