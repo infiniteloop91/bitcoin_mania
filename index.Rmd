@@ -155,12 +155,14 @@ The data for the project came from a variety of sources. The independent variabl
 The volume of stock trades per day was pulled from the New York Stock Exchange’s public data set. The data is specifically from the Volume Summary. This set provides a count of total trades and total volume per day. The only metric used for the analysis was total trades. 
 
 
- The volume of Bitcoin trades was acquired from data.bitcoinity.org. This organization keeps track of hundreds of different block chain metrics, but the trade volume was used for the project. The data set breaks down trade volume by individual coin type or brand, but the sum of all the various coins was used for the analysis.  The price of Bitcoin over time was taken directly from bitcoin.com. This only takes into account the price of the main crypto currency Bitcoin and does not reflect the price of the various alt coins offered on the market.  The US GDP data was gathered from tradingeconomics.com. Trading Economics is a company that provides users access to over 20 million economic indicators. GDP was analyzed using monthly increments. 
+The volume of Bitcoin trades was acquired from data.bitcoinity.org. This organization keeps track of hundreds of different block chain metrics, but the trade volume was used for the project. The data set breaks down trade volume by individual coin type or brand, but the sum of all the various coins was used for the analysis.  The price of Bitcoin over time was taken directly from bitcoin.com. This only takes into account the price of the main crypto currency Bitcoin and does not reflect the price of the various alt coins offered on the market.  The US GDP data was gathered from tradingeconomics.com. Trading Economics is a company that provides users access to over 20 million economic indicators. GDP was analyzed using monthly increments. 
 
 
 
 # III. Methodology
-The first test to examine the relationship or association between the dependent variables of securities traded and the number of Bitcoin traded and the independent variables of the number of Google searches was a basic correlation. Correlations range from -1 to 1. They measure the strength and linear direction of two variables. 
+The first test used to examine the relationship or association between the dependent variables of securities traded and the number of Bitcoin traded and the independent variables of the number of Google searches was a basic correlation. Correlations range from -1 to 1. They measure the strength and linear direction of two variables. 
+
+
 The second test used was linear regression. Linear regressions model the linear relationship between two variables. In the model there is a dependent variable, which is the y-value, or the outcome and the dependent variable is the indicator or x-value. How great is the variance of the dependent variable explained by the independent variable in the sample. 
 
 
