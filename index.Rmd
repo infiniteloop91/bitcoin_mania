@@ -353,24 +353,25 @@ Based on the analysis, the hypothesis that there is a stronger positive correlat
 
 # VI. Bibliography 
 
-Barberis, Nicholas, and Wei Xiong. “What Drives the Disposition Effect? An Analysis of a 	Long-Standing Preference-Based Explanation.” 2006, doi:10.3386/w12397.
-Ball, Philip. "Counting Google Searches Predicts Market Movements." Nature, 2013. doi:10.1038/nature.2013.12879.
-DeCambre, Mark. “Stock Market's Biggest Risk Is a 'Flash Crash', Says 'Flash Boys' Katsuyama.” MarketWatch, MarketWatch, 25 July 2017, www.marketwatch.com/story/heres-what-flash-boys-hero-katsuyama-sees-as-the-biggest-risk-in-the-stock-market-2017-07-24.
+Barberis, Nicholas, and Wei Xiong. “What Drives the Disposition Effect? An Analysis of a 	Long-Standing            Preference-Based Explanation.” 2006, doi:10.3386/w12397.
+  Ball, Philip. "Counting Google Searches Predicts Market Movements." Nature, 2013.                                doi:10.1038/nature.2013.12879.
+  
+DeCambre, Mark. “Stock Market's Biggest Risk Is a 'Flash Crash', Says 'Flash Boys' Katsuyama.” MarketWatch,        MarketWatch, 25 July 2017, www.marketwatch.com/story/heres-what-flash-boys-hero-katsuyama-sees-as-the-biggest-r   isk-in-the-stock-market-2017-07-24.
 
-Huang, Melody Y., Randall Rojas, and Patrick Convery. "Forecasting Stock Market Movements Using Google Trend Searches." MS, University of California, Los Angeles. 2013. https://editorialexpress.com/cgi-bin/conference/download.cgi?db_name=SNDE2018&paper_id=100.
+Huang, Melody Y., Randall Rojas, and Patrick Convery. "Forecasting Stock Market Movements Using Google Trend       Searches." MS, University of California, Los Angeles. 2013.                                                      https://editorialexpress.com/cgi-bin/conference/download.cgi?db_name=SNDE2018&paper_id=100.
 
-Lazer, D., R. Kennedy, G. King, and A. Vespignani. "The Parable of Google Flu: Traps in Big Data Analysis." Science 343, no. 6176 (2014): 1203-205. doi:10.1126/science.1248506.
+Lazer, D., R. Kennedy, G. King, and A. Vespignani. "The Parable of Google Flu: Traps in Big Data Analysis."        Science 343, no. 6176 (2014): 1203-205. doi:10.1126/science.1248506.
 
-Mackay, Charles, Martin S. Fridson, and Josef Penso De La Vega. Extraordinary Popular Delusions and the Madness of Crowds. New York: Wiley, 1996.
+Mackay, Charles, Martin S. Fridson, and Josef Penso De La Vega. *Extraordinary Popular Delusions and the Madness   of Crowds*. New York: Wiley, 1996.
 
-Montag, Ali. "Warren Buffett Explains One Thing People Still Don't Understand about Bitcoin." CNBC. May 01, 2018. Accessed December 15, 2018. https://www.cnbc.com/2018/05/01/warren-buffett-bitcoin-isnt-an-investment.html.
-P Values." Heterogeneity in Meta-analysis (Q, I-square) - StatsDirect. Accessed December 03, 2018. https://www.statsdirect.com/help/basics/p_values.htm.
+Montag, Ali. "Warren Buffett Explains One Thing People Still Don't Understand about Bitcoin." CNBC. May 01, 2018.   Accessed December 15, 2018. https://www.cnbc.com/2018/05/01/warren-buffett-bitcoin-isnt-an-investment.html.     
+P Values." Heterogeneity in Meta-analysis (Q, I-square) - StatsDirect. Accessed December 03, 2018.                 https://www.statsdirect.com/help/basics/p_values.htm.
 
-Salzberg, Steven. "Why Google Flu Is A Failure." Forbes. March 23, 2014. Accessed December 15, 2018. https://www.forbes.com/sites/stevensalzberg/2014/03/23/why-google-flu-is-a-failure/#67855a855535.
+Salzberg, Steven. "Why Google Flu Is A Failure." Forbes. March 23, 2014. Accessed December 15, 2018.               https://www.forbes.com/sites/stevensalzberg/2014/03/23/why-google-flu-is-a-failure/#67855a855535.
 
-Seth, Anil. "Granger Causality." Scholarpedia. Accessed December 15, 2018. http://www.scholarpedia.org/article/Granger_causality.
+Seth, Anil. "Granger Causality." Scholarpedia. Accessed December 15, 2018.                                         http://www.scholarpedia.org/article/Granger_causality.
 
-"Tulips and Flower Bulbs in the Netherlands." Visit the Beautiful Cities of the Dutch Golden Age - Holland.com. June 04, 2018. Accessed December 15, 2018. https://www.holland.com/global/tourism/discover-holland/traditional/tulips.htm.
+"Tulips and Flower Bulbs in the Netherlands." Visit the Beautiful Cities of the Dutch Golden Age - Holland.com.    June 04, 2018. Accessed December 15, 2018.                                                                       https://www.holland.com/global/tourism/discover-holland/traditional/tulips.htm.
 
 
 
