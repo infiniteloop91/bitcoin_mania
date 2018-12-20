@@ -109,10 +109,10 @@ Each year, seven million tulips bloom in Keukhenf, a public garden located in So
 
 
 
-The era is known as tulip madness. In the late 1500s, tulips were first imported to the Netherlands from India. Highly coveted for their intense color and their short period of bloom, tulips quickly became one of the highest demanded luxury commodities. Companies were soon formed to finance the growth and sales of tulips. More and more people began to speculate on the good in what would be labeled today as a futures market. Many investors made fortunes tied up in the speculation of future tulip-related transactions. By 1637, the tulip bubble burst. Buyers could not pay the prices they had previously agreed to pay. Charles Mackay made this period famous in his book, Extraordinary Popular Delusions and Madness of the Crowd. Mackay labeled this period of speculation as one of the first recorded economic bubbles (Mackay et al., 1996). 
+The era is known as tulip madness. In the late 1500s, tulips were first imported to the Netherlands from Asia. Highly coveted for their intense color and their short period of bloom, tulips quickly became one of the highest demanded luxury commodities. Companies were soon formed to finance the growth and sales of tulips. More and more people began to speculate on the good in what would be labeled today as a futures market. Many investors made fortunes tied up in the speculation of future tulip-related transactions. By 1637, the tulip bubble burst. Speculators and buyers could not pay the prices they had previously agreed to pay. The futures contracts became worthless. Charles Mackay made this period famous in his book, *Extraordinary Popular Delusions and Madness of the Crowd*. Mackay labeled this period of speculation as one of the first recorded economic bubbles (Mackay et al., 1996). 
 
 
-The United States may not have the same love for tulips as the Netherlands, but in 2017 Americans were swept away by the Bitcoin craze. Bitcoin is a digital currency, commonly referred to as a crypto-currency, created in 2009. Unlike hard cash, a sovereign nation or a bank does not back the value of Bitcoin. It is traded peer-to-peer completely online with the use of block chain technology. The market forces of supply and demand purely determine the value. Talk of Bitcoin has taken over social media. Everyone from Warren Buffet to the researcher’s Uber driver has discussed the potential of Bitcoin. The price increased by 200-percent in 2017 and quickly crashed in the summer of 2018 (Bitcoin Price, 2018).
+The United States may not have the same love for tulips as the Netherlands, but in 2017 Americans were swept away by the Bitcoin craze. Bitcoin or what is commonly referred to as a crypto-currency was created in 2009. Unlike hard cash, sovereign nations and banks do not back the monetary value of Bitcoin. It is traded peer-to-peer completely online with the use of block chain technology. The market forces of supply and demand purely determine the value. Talk of Bitcoin has taken over social media. Everyone from Warren Buffet to the researcher’s Uber driver has discussed the potential of Bitcoin. The price increased by 200-percent in 2017 and quickly crashed in the summer of 2018 (Bitcoin Price, 2018).
  
 
   
@@ -132,13 +132,16 @@ p_3
 
 ```
 <br>
-While anyone may buy or sell equity securities with the rise of online banking and mobile applications such as Robinhood and Acorn, most people still have a professional stock broker or financial advisor manage their money. There is no intermediary with Bitcoin apps like Coinbase, Kraken, and Gemini. The question then arises: do people hear about Bitcoin while talking to a friend, watching television, or listening to a podcast and then use Google to find out where they can purchase or trade the crypto currency. Based on this notion, it is hypothesized that there is a stronger correlation between Google search trends and the volume of Bitcoin transactions compared to Google search trends and the volume of traditional equity transactions. The null hypothesis would be that the associations/correlations are equivalent.
+While anyone may buy or sell equity securities with the rise of online banking and mobile applications such as Robinhood and Acorn, most people still have a professional stock broker or financial advisor manage their money. There is no intermediary with Bitcoin apps like Coinbase, Kraken, and Gemini. The question then arises: Do people hear about Bitcoin while talking to a friend, watching television, or listening to a podcast and then use Google to find out where they can purchase or trade the crypto currency. Based on this notion, it is hypothesized that there is a stronger positive correlation between Google search trends and the volume of Bitcoin transactions compared to Google search trends and the volume of traditional equity transactions. The null hypothesis would be that the associations/correlations are equivalent or the association is negative.
 
 
-In 2008, researchers from Google began to use search data to attempt to predict the overall prevalence of the flu in given geographic areas. The model, labeled Google Flu Trends or GFT, failed to accurately predict outbreaks 100 out of the first 108 weeks following its launch (Lazer et al, 2014). The main issue with the model was that the it was very susceptible to false positives that included users searching for topics related to flu-like symptoms, but were not actual cases of the flu. The second issue was that the model could not deal with the time lag between when a person searches for flu related symptoms and is actually infected with the flu (Salzberg, 2014).
+>*<font style="color: #437209">There is a stronger positive correlation between Google search trends and the volume of Bitcoin transactions compared to Google search trends and the volume of traditional equity transactions.</font>*
+
+
+In 2008, researchers from Google began to use search data to attempt to predict the overall prevalence of the flu in given geographic areas. The model, labeled Google Flu Trends or GFT, failed to accurately predict outbreaks 100 out of the first 108 weeks following its launch (Lazer et al, 2014). The main issue with the model was that it was very susceptible to false positives that included users searching for topics related to flu-like symptoms, but were not actual cases of the flu. The second issue was that the model could not deal with the time lag between when a person searcheed for flu-related symptoms and was actually infected with the flu (Salzberg, 2014).
 	
 	
-The Google Flu Trends project was released to the public and the results were published in the journal Nature in 2014. It was one of the first large scale research efforts that leveraged publically available search data to predict future behavior. Melody Y. Huang and other members of the University of California Los Angeles’ statistics department used this search trend data in attempt to predict movements of the S&P 500 in the paper Forecasting Stock Market Movements using Google Trend Searches. While the team did not find significant results and could not produce positive returns using financial backtests, they did examine the pros and cons of using various predictive models as a mechanism for stock prediction (Huang et al. 2013). 
+The Google Flu Trends project was released to the public and the results were published in the journal *Nature* in 2014. It was one of the first large scale research efforts that leveraged publically available search data to predict future behavior. Melody Y. Huang and other members of the University of California Los Angeles’ statistics department used this search trend data in attempt to predict movements of the S&P 500 in the paper Forecasting Stock Market Movements using Google Trend Searches. While the team did not find significant results and could not produce positive returns using financial backtests, they did examine the pros and cons of using various predictive models as a mechanism for stock prediction (Huang et al. 2013). 
 
 
 
@@ -155,7 +158,7 @@ The data for the project came from a variety of sources. The independent variabl
 The volume of stock trades per day was pulled from the New York Stock Exchange’s public data set. The data is specifically from the Volume Summary. This set provides a count of total trades and total volume per day. The only metric used for the analysis was total trades. 
 
 
-The volume of Bitcoin trades was acquired from data.bitcoinity.org. This organization keeps track of hundreds of different block chain metrics, but the trade volume was used for the project. The data set breaks down trade volume by individual coin type or brand, but the sum of all the various coins was used for the analysis.  The price of Bitcoin over time was taken directly from bitcoin.com. This only takes into account the price of the main crypto currency Bitcoin and does not reflect the price of the various alt coins offered on the market.  The US GDP data was gathered from tradingeconomics.com. Trading Economics is a company that provides users access to over 20 million economic indicators. GDP was analyzed using monthly increments. 
+The volume of Bitcoin trades was acquired from data.bitcoinity.org. This organization keeps track of hundreds of different block chain metrics, but the trade volume was used for the project. The data set breaks down trade volume by individual coin type or brand, but the sum of all the various coins was used for the analysis.  The price of Bitcoin over time was taken directly from bitcoin.com. This only takes into account the price of the main crypto currency Bitcoin and does not reflect the price of the various alt coins offered on the market. The US GDP data was gathered from tradingeconomics.com. Trading Economics is a company that provides users access to over 20 million economic indicators. GDP was analyzed using monthly increments. 
 
 
 
@@ -214,7 +217,7 @@ p_3 <- plot_ly(x = ~google_data$DATE,
                type = 'scatter', 
                mode = 'lines',
               line = list(color = 'rgb(67, 114, 9)', width = 3)) %>%
-    layout(title="Searches for the word stocks",
+    layout(title="Searches for the Word Stocks",
            xaxis=list(title="Date"),
                        yaxis=list(title="Searches"))
 p_3
@@ -286,7 +289,7 @@ p_cor_1 <- plot_ly(x = ~bitcoin_data$bitcoin,
                        color = 'rgb(154, 246, 144)',
                        line = list(color = 'rgb(67, 114, 9)',
                                    width = 2))) %>%
-  layout(title = 'Correlation between Search Data and Bitcoin Trades',
+  layout(title = 'Correlation Between Search Data and Bitcoin Trades',
          yaxis = list(title = "Bitcoin Trades"),
          xaxis = list(title = "Search Data"))
 
@@ -304,7 +307,7 @@ p_cor_2 <- plot_ly(x = ~google_data$SEARCHES,
                        color = 'rgb(154, 246, 144)',
                        line = list(color = 'rgb(67, 114, 9)',
                                    width = 2))) %>%
-  layout(title = 'Correlation between Search Data and Stock Trades',
+  layout(title = 'Correlation Between Search Data and Stock Trades',
          yaxis = list(title = "Stock Trades"),
          xaxis = list(title = "Search Data"))
 
@@ -346,7 +349,7 @@ The Granger Causality test for Bitcoin searches and the volume of Bitcoin trades
 The Granger test was run on the Google search trends for stocks and the volume of trades of equity securities. The test produced a .0197 F-test value and a .8892 p-value. So, again we cannot reject the null hypothesis that Google Search trends do help predict future trade volume for securities. 
 
 # VI. Conclusion
-Based on the analysis, the hypothesis that there is a stronger correlation between Google search trends and the volume of Bitcoin transactions compared to Google search trends and the volume of traditional equity securities transactions can be rejected. There is little association between search data and the number of transactions. Given the evidence provided by both regression models, there is a negative relationship between the number of Google searches and transactions. The data is limited by the fact it is case sensitive and there are millions of variations individuals could search for Bitcoin or stock related topics. Also, both the equity and Bitcoin market are greatly influenced by bot and high-frequency-trading activity. As seen in the flash crash in the 2000s, these two factors play a large role in the volume of transactions (Decambre, 2017). This model is an extremely simplified version of market factors. Markets are interdependent and are influenced by nearly an infinite number of parameters –some of which cannot be measured quantitatively. The use of search data for predicting behavior may be extremely useful in more isolated or more target spaces with more detailed models. While the results were inconclusive, they can be used built off of or as a reference point for future research. 
+Based on the analysis, the hypothesis that there is a stronger positive correlation between Google search trends and the volume of Bitcoin transactions compared to Google search trends and the volume of traditional equity securities transactions can be rejected. There is little association between search data and the number of transactions. Given the evidence provided by both regression models, there is a negative relationship between the number of Google searches and transactions. The data is limited by the fact it is case-sensitive and there are millions of variations individuals could search for Bitcoin or stock related topics. Also, both the equity and Bitcoin market are greatly influenced by bot and high-frequency-trading activity. As seen in the flash crash in the 2000s, these two factors play a large role in the volume of transactions (Decambre, 2017). This model is an extremely simplified version of market factors. Markets are interdependent and are influenced by nearly an infinite number of parameters –--some of which cannot be measured quantitatively. The use of search data for predicting behavior may be extremely useful in isolated or targeted spaces with more detailed models. While the results were inconclusive, they can be built off of or used as a reference point for future research. 
 
 # VI. Bibliography 
 
